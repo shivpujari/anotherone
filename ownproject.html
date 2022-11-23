@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ownproject.css">
+</head>
+<body>
+<div class="container">
+    <div class="image" style="background-image: url('f4d4bcbbd93187194c3df99702219977.jpg');">
+    </div>
+<div class="image" style="background-image:url('forest-dog-husky-wallpaper-preview.jpg');">
+</div>
+<div class="image active" style="background-image:url('unnamed.png'); "></div>
+<div class="image" style="background-image:url('three-beautiful-white-horses-hd-desktop-wallpaper-for-your-pc-wallpaper-preview.jpg');">
+</div>
+<div class="image" style="background-image:url('tree-736885__480.jpg');">
+</div>
+</div>
+  <script>
+    const images = document.querySelectorAll('.image')
+
+    images.forEach(image => {
+       image.addEventListener('click' , () =>{
+            removeActiveClasses()
+            image.classList.add('active')
+        })
+    })
+    function removeActiveClasses(){
+        images.forEach(image => {
+            image.classList.remove('active')
+        })
+    }
+  </script>
+</body>
+</html>
